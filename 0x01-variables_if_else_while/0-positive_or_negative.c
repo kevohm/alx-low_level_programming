@@ -3,12 +3,20 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ *This code outputs random number
+ *The number is printed 
+ *detects number if zero, negative and positive
+ */
+
 int main(void)
 {
 	int n;
 
 	srand(time(0));
+
 	n = rand() - RAND_MAX / 2;
+
 	/* your code goes there */
 	if(n<0){
         printf("%d is negative", n);
