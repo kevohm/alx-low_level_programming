@@ -1,15 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
-#include<stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+#include <stdio.h>
 /**
  *This code outputs random number
  *The number is printed 
  *detects number if zero, negative and positive
  */
-
 int main(void)
 {
 	int n;
