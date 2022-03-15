@@ -32,10 +32,8 @@ void times_table(void)
 			}
 			
 		x++;
-			if(x == 9 && y!=9){
-				x=0;
-			}
+
 		}
-	_putchar('\n');
+	_putchar("\n");
 	}
 }
