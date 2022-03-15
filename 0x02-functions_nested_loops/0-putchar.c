@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "_putchar.h"
 /**
 * main - prints a string
 * Description: the string is "Holberton"
