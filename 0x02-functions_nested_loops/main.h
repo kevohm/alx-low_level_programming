@@ -1,6 +1,6 @@
-#ifndef _putchar.h
+#ifndef PUTCHAR_H
 
-#define _putchar.h
+#define PUTCHAR_H
 
 /* _putchar.c */
 int _putchar(char);
