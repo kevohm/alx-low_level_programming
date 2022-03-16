@@ -3,6 +3,11 @@
 
 #include <stdio.h>
 
-void positive_or_negative(int i);
+void positive_or_negative(int i){
+     if(i == 0){
+           return "0 is zero";
+     }
+
+};
 
 #endif 
