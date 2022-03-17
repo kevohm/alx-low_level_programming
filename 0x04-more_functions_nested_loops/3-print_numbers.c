@@ -1,21 +1,14 @@
 #include "main.h"
 
 /**
-* print 0 to 9
-* using _putchar()
-*
-*/
-void print_numbers(void){
-     _putchar(48);
-     _putchar(49);
-     _putchar(50);
-     _putchar(51);
-     _putchar(52);
-     _putchar(53);
-     _putchar(54);
-     _putchar(55);
-     _putchar(56);
-     _putchar(57);
-     _putchar('/n');
+ * print_numbers - print 0-9
+ */
+void print_numbers(void)
+{
+	int x;
 
+	for (x = 0; x < 10; x++)
+		_putchar(x + 48);
+
+	_putchar('\n');
 }
