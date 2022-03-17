@@ -1,12 +1,13 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
-* Prototype: int _isdigit(int c);
-* Returns 1 if c is a digit
-* Returns 0 otherwise
+* _isupper - checks if c is an uppercase letter
+* @c: integer to test
+* Return: 1 for true, 0 for false
 */
-int _isdigit(int c){
-      if(c >= 48 && c <= 57){
-           return 1;
-      }return 0;
-};
+int _isupper(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (1);
+	return (0);
+}
