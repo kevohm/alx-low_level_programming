@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* mul takes two arguements (int)
-* @c integer - c
-* return product
+* mul - returns product
+* @c: integer c
+* return: product(a*b)
 *
 */
 int mul(int a, int b){
