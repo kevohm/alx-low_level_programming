@@ -2,13 +2,13 @@
 #define MAIN_H
 
 
-int _putchar(char);
+int _putchar(char c);
 
 /* 0-isupper.c */
-int _isupper(int);
+int _isupper(int c);
 
 /* 1-isdigit.c */
-int _isdigit(int);
+int _isdigit(int c);
 
 /* 2-mul.c */
 int mul(int a, int b);
@@ -26,7 +26,7 @@ void more_numbers(void);
 void print_line(int n);
 
 /* 7-print_diagonal.c */
-void print_diagonal(int);
+void print_diagonal(int c);
 
 /* 8-print_square.c */
 void print_square(int size);
