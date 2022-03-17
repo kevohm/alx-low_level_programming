@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * Prototype: int _isdigit(int c);
 * Returns 1 if c is a digit
@@ -9,4 +10,3 @@ int _isdigit(int c){
            return 1;
       }return 0;
 };
-
