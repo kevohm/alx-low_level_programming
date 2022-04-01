@@ -9,11 +9,6 @@
  */
 int main(int argc, char *argv[])
 {
-	int count = 0;
-
-	(void)argv;
-	while (--argc)
-		count++;
-	printf("%i\n", count);
+	printf("%i\n", argc);
 	return (0);
 }
