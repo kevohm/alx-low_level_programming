@@ -1,6 +1,12 @@
-#include <main.h>
+#include "main.h"
+#include <stdio.h>
+
 /**
- * _isalpha - returns 1 if c is a letter
- * @c: integer to be tested
+ * _strpbrk - searches a string for any of a set of bytes
+ * @s: string to be searched
+ * @accept: bytes to be accepted
  */
-char *_strpbrk(char *s, char *accept){};
+char *_strpbrk(char *s, char *accept)
+{
+
+}

@@ -1,7 +1,10 @@
-#include <main.h>
+#include "main.h"
 /**
 *_strcat - concatinates 2 str
 *@dest: destination pointer
 *@src: pointer to a str
 */
-char *_strcat(char *dest, char *src){};
+char *_strcat(char *dest, char *src)
+{
+
+}
