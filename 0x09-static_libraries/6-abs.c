@@ -1,2 +1,2 @@
-#include<main.h>
+#include <main.h>
 int _abs(int n){};
