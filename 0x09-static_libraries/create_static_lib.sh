@@ -1,4 +1,5 @@
 #!/bin/bash
-gcc -c *.c
-ar rc liball.a *.o
+gcc -Wall -pedantic -Wextra -std=gnu89 -c *.c
+ar -cr libmy.a *.o
 rm *.o
+
