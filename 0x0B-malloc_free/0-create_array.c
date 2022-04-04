@@ -1,5 +1,6 @@
-#include <main.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
 /**
  * create_array - prints buffer in hexa
  * @c: the character to initialize array with
@@ -7,11 +8,16 @@
  * Return pointer to the array or NULL if it fails
  */
 char *create_array(unsigned int size, char c){
-             if(size == ){
-	     return NULL:
-	     }
-	     char *p;
+            char* p;
+	   unsigned int i= 0; 
+	
+	    if(size == 0){
+	     return NULL;
+	    }
 	     p = (char *)malloc(sizeof(char)*size);
-	     *p = c;
+	     while(i < size){
+	     *(p+i) = c;
+	     ++i;
+	     }
 	     return  p;
-};
+}
