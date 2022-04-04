@@ -15,7 +15,7 @@ int count(char *p)
 	return (len);
 }
 char *copy(char *c, char *d)
-{	 
+{
 	while (*c)
 	{
 		*d = *c;
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int len;
 
-	if(s1 == NULL && s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		q = malloc(1);
 		*q = '\0';
@@ -60,9 +60,7 @@ char *str_concat(char *s1, char *s2)
 	q = malloc(len * sizeof(char));
 	p = q;
 	if (q == NULL)
-	{
 		return (NULL);
-	}
 	q = copy(s1, q);
 	q = copy(s2, q);
 	q = '\0';
