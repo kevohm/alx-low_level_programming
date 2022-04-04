@@ -34,13 +34,13 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		sum += count(av[i]);
 	}
 	q = malloc(sizeof(char) * sum);
 	p = q;
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		while (*(av[i]))
 		{
@@ -55,4 +55,4 @@ char *argstostr(int ac, char **av)
 		}
 	}q = p;
 	return (q);
-}
+}i
