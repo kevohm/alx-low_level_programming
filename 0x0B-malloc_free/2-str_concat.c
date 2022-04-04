@@ -23,7 +23,7 @@ int count(char *p)
  * copy - copy array to pointer
  * @c: char
  * @d: char
- * Return: char 
+ * Return: char
  */
 
 char *copy(char *c, char *d)
@@ -37,7 +37,7 @@ char *copy(char *c, char *d)
 	return (d);
 }
 /** 
- * str_concat - copy two strings to one and return 
+ * str_concat - copy two strings to one and return
  * @s1: char
  * @s2: char
  * Return: char
