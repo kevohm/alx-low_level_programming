@@ -12,13 +12,14 @@ int count(char *p)
 	}len++;
 	return (len);
 }
-void copy(char *c, char *d)
+char *copy(char *c, char *d)
 {	 while(*c)
 	{
 		*d = *c;
 		c ++;
 		d ++;
 	}
+	return (d);
 }
 char *str_concat(char *s1, char *s2)
 {
@@ -26,21 +27,28 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int len;
 
+	if(s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
 	if (s1 == NULL)
 	{
-		len = count(s1) + count(s2) - 1;
+		len = count(s2);
 		q = malloc(len * sizeof(char));
 		p = q;
-		copy(s2,q);
+		q = copy(s2,q);
+		q = '\0';
 		q = p;
 		return (q);
 	}
 	if (s2 == NULL)
 	{
-		len = count(s1) + count(s2) - 1;
+		len = count(s1);
 	       	q = malloc(len * sizeof(char));
 		p = q;
 		copy(s1,q);
+		q = '\0';
+		q = p;
 		return (q);
 	}
 	len = count(s1) + count(s2) - 1;
@@ -50,8 +58,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	copy(s1,q);
-	copy(s2,q);
+	q = copy(s1,q);
+	q = copy(s2,q);
 	q = '\0';
 	q = p;
 	return (q);
