@@ -36,7 +36,7 @@ char *copy(char *c, char *d)
 	}
 	return (d);
 }
-/** 
+/**
  * str_concat - copy two strings to one and return
  * @s1: char
  * @s2: char
