@@ -29,9 +29,8 @@ char *str_concat(char *s1, char *s2)
 
 	if(s1 == NULL && s2 == NULL)
 	{
-		char p[] = " ";
-		q = malloc(2);
-		*q = p[0];
+		q = malloc(1);
+		*q = '\0';
 		return (q);
 	}
 	if (s1 == NULL)
