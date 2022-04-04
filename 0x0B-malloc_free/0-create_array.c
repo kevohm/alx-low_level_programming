@@ -1,5 +1,5 @@
-# include <main.h>
-# include <stdio.h>
+#include <main.h>
+#include <stdio.h>
 /**
  * create_array - prints buffer in hexa
  * @c: the character to initialize array with
