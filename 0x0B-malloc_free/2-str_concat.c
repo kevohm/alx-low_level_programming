@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * count - counts elemets in array
+ * @p: char
+ * Return: int
+ */
 int count(char *p)
 {
 	int len = 0;
@@ -14,6 +19,13 @@ int count(char *p)
 	len++;
 	return (len);
 }
+/**
+ * copy - copy array to pointer
+ * @c: char
+ * @d: char
+ * Return: char 
+ */
+
 char *copy(char *c, char *d)
 {
 	while (*c)
@@ -24,6 +36,13 @@ char *copy(char *c, char *d)
 	}
 	return (d);
 }
+/** 
+ * str_concat - copy two strings to one and return 
+ * @s1: char
+ * @s2: char
+ * Return: char
+ *
+ */
 char *str_concat(char *s1, char *s2)
 {
 	char *q;
