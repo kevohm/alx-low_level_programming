@@ -5,19 +5,22 @@
 int count(char *p)
 {
 	int len = 0;
+
 	while (*p)
 	{
 		p++;
 		len++;
-	}len++;
+	}
+	len++;
 	return (len);
 }
 char *copy(char *c, char *d)
-{	 while(*c)
+{	 
+	while (*c)
 	{
 		*d = *c;
-		c ++;
-		d ++;
+		c++;
+		d++;
 	}
 	return (d);
 }
@@ -38,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 		len = count(s2);
 		q = malloc(len * sizeof(char));
 		p = q;
-		q = copy(s2,q);
+		q = copy(s2, q);
 		q = '\0';
 		q = p;
 		return (q);
@@ -46,9 +49,9 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 	{
 		len = count(s1);
-	       	q = malloc(len * sizeof(char));
+		q = malloc(len * sizeof(char));
 		p = q;
-		copy(s1,q);
+		copy(s1, q);
 		q = '\0';
 		q = p;
 		return (q);
@@ -60,8 +63,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	q = copy(s1,q);
-	q = copy(s2,q);
+	q = copy(s1, q);
+	q = copy(s2, q);
 	q = '\0';
 	q = p;
 	return (q);
