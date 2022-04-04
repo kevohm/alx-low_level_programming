@@ -38,7 +38,7 @@ char *argstostr(int ac, char **av)
 	{
 		sum += count(av[i]);
 	}
-	q = malloc(sizeof(char) * sum);
+	q = (char *)malloc(sizeof(char) * sum);
 	p = q;
 	for (i = 0; i < ac; i++)
 	{
