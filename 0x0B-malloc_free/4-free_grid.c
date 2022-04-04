@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * free_grid - frees a 2_dimensional grid 
+ * free_grid - frees a 2_dimensional grid
  * @grid: 2_dimensional grid
  * @height: size of array
  * Return: nothing
@@ -12,7 +12,7 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
-	for(i = 0; i < height; i++)
+	for (i = 0; i < height; i++)
 	{
 		free(grid[i]);
 	}
