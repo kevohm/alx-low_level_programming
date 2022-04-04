@@ -1,23 +1,23 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
 /**
- * _strdup - function returns a pointer to a new string which is a duplicate of the string str
+ * _strdup - returns a pointer to a new string duplicating(str)
  * @str: string
  * Return: char *
  *
  */
 char *_strdup(char *str)
-{	
-	char *p,*s = str;
+{
+	char *p, *s = str;
 	int len;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	while(*s)
+	while (*s)
 	{
 		len++;
 		s++;
@@ -28,11 +28,12 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	s = p;
-	while(*str)
+	while (*str)
 	{
 		*p = *str;
 		str++;
 		p++;
-	}p = s;
+	}
+	p = s;
 	return (p);
 }
