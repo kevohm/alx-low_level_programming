@@ -6,10 +6,11 @@
  * alloc_grid - allocate and return mulltidimentional array
  * @width: size of array in the array
  * @height: size of array
+ * Return: pointer to multidimentional array
  */
 int **alloc_grid(int width, int height)
 {
-	int** q = malloc(sizeof(int *) * height);
+	int **q = malloc(sizeof(int *) * height);
 	int i, j;
 
 	if (q == NULL)
@@ -24,7 +25,8 @@ int **alloc_grid(int width, int height)
 	{
 		q[i] = (int *)malloc(sizeof(int) * width);
 		if (q[i] == NULL)
-		{       while (i >= 0)
+		{       
+			while (i >= 0)
 			{
 				free(q[i]);
 				i--;
@@ -33,9 +35,9 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-	for(i = 0;i < height;i++)
+	for (i = 0; i < height; i++)
 	{
-		for(j = 0; j < width;j++)
+		for (j = 0; j < width; j++)
 		{
 			q[i][j] = 0;
 		}
