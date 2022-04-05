@@ -45,7 +45,7 @@ char *argstostr(int ac, char **av)
 			av[i] = d;
 			sum++;
 	}
-	q = malloc(sizeof(char) * sum);
+	q = malloc(sizeof(char) * (sum + 1));
 	p = q;
 	for (i = 0; i < ac; i++)
 	{
