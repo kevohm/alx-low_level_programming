@@ -31,19 +31,18 @@ char *argstostr(int ac, char **av)
 	char *p;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
 	for (i = 0; i < ac; i++)
 	{
-			char *d = av[i];
-			while (*(av[i]))
-			{
-				sum++;
-				(av[i])++;
-			}
-			av[i] = d;
+		char *d = av[i];
+
+		while (*(av[i]))
+		{
 			sum++;
+			(av[i])++;
+		}
+		av[i] = d;
+		sum++;
 	}
 	q = malloc(sizeof(char) * (sum + 1));
 	p = q;
@@ -51,21 +50,21 @@ char *argstostr(int ac, char **av)
 	{
 		while (*(av[i]))
 		{
-			*q = *(av[i]); 
+			*q = *(av[i]);
 			(av[i])++;
 			q++;
 		}
-		if (ac == (i+1))
+		if (ac == (i + 1))
 		{
 			*q = '\n';
 			q++;
 			break;
 		}
-		if (*(av[i]) =='\0')
+		if (*(av[i]) == '\0')
 		{
 			*q = '\n';
 			q++;
 		}
-	}q = p;
+	} q = p;
 	return (q);
 }
