@@ -27,8 +27,7 @@ int count(char *a)
 char *argstostr(int ac, char **av)
 {
 	int i, sum = 0;
-	char *q;
-	char *p;
+	char *q, *p;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -43,8 +42,7 @@ char *argstostr(int ac, char **av)
 		}
 		av[i] = d;
 		sum++;
-	}
-	q = malloc(sizeof(char) * (sum + 1));
+	} q = malloc(sizeof(char) * (sum + 1));
 	p = q;
 	for (i = 0; i < ac; i++)
 	{
@@ -55,12 +53,16 @@ char *argstostr(int ac, char **av)
 			q++;
 		}
 		if (ac == (i + 1))
+		{
 			*q = '\n';
 			q++;
 			break;
+		}
 		if (*(av[i]) == '\0')
+		{
 			*q = '\n';
 			q++;
+		}
 	} q = p;
 	return (q);
 }
