@@ -39,13 +39,19 @@ char *argstostr(int ac, char **av)
 		if (i == (ac - 1))
 		{
 			sum += count(av[i]);
-			sum--;
 		}else
 		{
-		sum += count(av[i]);
+			char *d = av[i];
+			while (*(av[i]))
+			{
+				sum++;
+				(av[i])++;
+			}
+			av[i] = d;
+			sum++;
 		}
 	}
-	q = malloc(sizeof(char) * 10);
+	q = malloc(sizeof(char) * sum);
 	p = q;
 	for (i = 0; i < ac; i++)
 	{
