@@ -36,7 +36,14 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
+		if (i == (ac - 1))
+		{
+			sum += count(av[i]);
+			sum--;
+		}else
+		{
 		sum += count(av[i]);
+		}
 	}
 	q = malloc(sizeof(char) * sum);
 	p = q;
@@ -48,11 +55,16 @@ char *argstostr(int ac, char **av)
 			(av[i])++;
 			q++;
 		}
-		if (*(av[i]) == '\0')
+		if (ac == (i+1))
+		{
+			*q = '\n';
+			break;
+		}
+		if (*(av[i]) =='\0')
 		{
 			*q = '\n';
 			q++;
 		}
 	}q = p;
 	return (q);
-}i
+}
