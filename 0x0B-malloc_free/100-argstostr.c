@@ -55,16 +55,12 @@ char *argstostr(int ac, char **av)
 			q++;
 		}
 		if (ac == (i + 1))
-		{
 			*q = '\n';
 			q++;
 			break;
-		}
 		if (*(av[i]) == '\0')
-		{
 			*q = '\n';
 			q++;
-		}
 	} q = p;
 	return (q);
 }
