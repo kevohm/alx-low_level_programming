@@ -58,6 +58,7 @@ char *argstostr(int ac, char **av)
 		if (ac == (i+1))
 		{
 			*q = '\n';
+			q++;
 			break;
 		}
 		if (*(av[i]) =='\0')
