@@ -20,6 +20,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int lens1 = length(s1);
 	unsigned int lens2 = length(s2);
 
+	if(lens1 == 0 && lens2 == 0)
+	{
+		return NULL;
+	}
 	if(s1 == NULL)
 	{
 		lens1 = 0;
