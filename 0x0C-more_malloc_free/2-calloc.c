@@ -1,7 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
-
+/**
+ * _calloc - allocate to array
+ * @nmemb: number of elements
+ * @size: size in bytes per element
+ *
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
@@ -16,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for(i = 0; i < (size * nmemb); i++)
+	for (i = 0; i < (size * nmemb); i++)
 	{
 		p[i] =  0;
 	}
