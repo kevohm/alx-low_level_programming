@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		n = lens2;
 	}
-	current = malloc( (lens1 + n) * sizeof(char));
+	current = malloc( (lens1 + n + 1) * sizeof(char));
 	start = current;
 
 	if (!current)
