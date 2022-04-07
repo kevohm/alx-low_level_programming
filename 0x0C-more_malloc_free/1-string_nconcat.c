@@ -2,34 +2,32 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * length - length of string
- * @s: pointer to char
- * Return: length
- *
+ * _strlen - counts the length of string.
+ * @s: Value string check.
+ * Return: String.
  */
-unsigned int length(char *s)
+int _strlen(char *s)
 {
-	unsigned int len = 0;
+	int i;
 
-	while (*s)
+	for (i = 0; s[i] != '\0';)
 	{
-		len++;
-		s++;
+		i++;
 	}
-	return (len);
+	return (i);
 }
 /**
- * string_nconcat - concat string
- * @s1: string
- * @s2: string
- * n: size to copy
- * Return: pointer to char
+ * string_nconcat - concatenate two strings.
+ * @s1: first string.
+ * @s2: second string.
+ * @n: bytes for s2 to use.
+ * Return: Only both strings.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *start, *current;
-	unsigned int lens1;
-	unsigned int lens2;
+
+	unsigned int i, len1, len2;
+	char *c;
 
 	if (s1 == NULL)
 	{
@@ -39,32 +37,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	lens1 = length(s1);
-	lens2 = length(s2);
-	if (n > lens2)
+
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+
+	if (n >= len2)
 	{
-		n = lens2;
+		n = len2;
 	}
-	current = malloc( (lens1 + n + 1) * sizeof(char));
-	start = current;
-	if (!current)
-	{
+
+	c = malloc(sizeof(char) * (len1 + n + 1));
+	if (c == NULL)
 		return (NULL);
-	}
-	while (lens1 > 0)
-	{
-		*current = *s1;
-		s1++;
-		current++;
-		lens1--;
-	}
-	while (n > 0)
-	{
-		*current = *s2;
-		s2++;
-		current++;
-		n--;
-	} *current = '\0';
-	current = start;
-	return (current);
+
+	for (i = 0; i < len1; i++)
+		c[i] = s1[i];
+	for (; i < len1 + n; i++)
+		c[i] = s2[i - len1];
+	c[len1 + n] = '\0';
+
+	return (c);
 }
