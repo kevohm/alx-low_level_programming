@@ -26,11 +26,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	current = malloc( (lens1 + n) * sizeof(char));
 	start = current;
-	while(*s1)
+
+	if (!current)
+	{
+		return NULL;
+	}
+	while(lens1 > 0)
 	{
 		*current = *s1;
 		s1++;
 		current++;
+		lens1--;
 	}
 	while(n > 0)
 	{
