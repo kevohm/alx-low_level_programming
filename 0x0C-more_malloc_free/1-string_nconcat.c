@@ -22,6 +22,7 @@ unsigned int length(char *s)
  * string_nconcat - concat string
  * @s1: string
  * @s2: string
+ * n: size to copy
  * Return: pointer to char
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -46,7 +47,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	current = malloc( (lens1 + n + 1) * sizeof(char));
 	start = current;
-
 	if (!current)
 	{
 		return (NULL);
@@ -66,5 +66,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n--;
 	} *current = '\0';
 	current = start;
-	return current;
+	return (current);
 }
