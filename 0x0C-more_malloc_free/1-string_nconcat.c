@@ -17,21 +17,19 @@ unsigned int length(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *start, *current;
-	unsigned int lens1 = length(s1);
-	unsigned int lens2 = length(s2);
+	unsigned int lens1;
+	unsigned int lens2;
 
-	if(lens1 == 0 && lens2 == 0)
-	{
-		return NULL;
-	}
 	if(s1 == NULL)
 	{
-		lens1 = 0;
+		s1 = "";
 	}
-	if (s2 == NULL)
+	if(s2 == NULL)
 	{
-		lens2 = 0;
+		s2 = "";
 	}
+	lens1 = length(s1);
+	lens2 = length(s2);
 	if(n > lens2)
 	{
 		n = lens2;
