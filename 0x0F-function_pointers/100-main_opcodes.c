@@ -15,16 +15,16 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(1);
+		exit (1);
 	}
 	nofb = atoi(argv[1]);
 
-	if(nofb == 0)
+	if (nofb == 0)
 		return (1);
 	if (nofb < 0)
 	{
 		printf("Error\n");
-		exit(2);
+		exit (2);
 	}
 	for (i = 0; i < nofb; i++)
 	{
