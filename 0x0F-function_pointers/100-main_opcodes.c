@@ -18,6 +18,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	nofb = atoi(argv[1]);
+
 	if (nofb == 0)
 		return (1);
 	if (nofb < 0)
