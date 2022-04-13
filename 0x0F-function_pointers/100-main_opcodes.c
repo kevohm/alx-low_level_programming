@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	}
 	nofb = atoi(argv[1]);
 
-	if (nofb == 0)
+	if(nofb == 0)
 		return (1);
 	if (nofb < 0)
 	{
