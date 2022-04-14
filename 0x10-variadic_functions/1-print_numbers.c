@@ -8,7 +8,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list list;
 
 	va_start(list, n);
-	i
 	while (i < n)
 	{
 		printf("%d", va_arg(list, int));
