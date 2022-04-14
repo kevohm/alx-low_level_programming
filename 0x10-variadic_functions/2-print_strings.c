@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * print-strings - prints strings separated by the given separator
+ * print_strings - prints strings separated by the given separator
  * @separator: string to separate
  * @n: no of args
  * Return: nothing
