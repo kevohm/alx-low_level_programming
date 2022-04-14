@@ -1,40 +1,98 @@
-#include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
-#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * prt_char - prints a character pointed to by a va_list
+ * @ch: the character to be printed
+ * Return: No Value
+ */
+
+void prt_char(va_list ch)
+{
+	printf("%c", va_arg(ch, int));
+}
+
+/**
+ * prt_int - prints an integer pointed to by a va_list
+ * @in: the integer to be printed
+ * Return: No Value
+ */
+
+void prt_int(va_list in)
+{
+	printf("%d", va_arg(in, int));
+}
+
+/**
+ * prt_float - prints a float pointed to by a va_list
+ * @fl: the float to be printed
+ * Return: No Value
+ */
+
+void prt_float(va_list fl)
+{
+	printf("%f", va_arg(fl, double));
+}
+
+/**
+ * prt_str - prints a string pointed to by a va_list
+ * @st: the string to be printed
+ * Return: No Value
+ */
+
+void prt_str(va_list st)
+{
+	char *sub;
+
+	sub = va_arg(st, char *);
+	switch (!sub)
+	{
+	case 1:
+		printf("(nil)");
+		break;
+	default:
+		printf("%s", sub);
+		break;
+	}
+}
+
+/**
+ * print_all - prints anything
+ * @format: a pointer to a list of types being fed into the function
+ * Return: No Value
+ */
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	int len = strlen(format);
-	va_list list;
+	int i = 0, j = 0;
+	va_list elemtopr;
+	var varray[] = {
+		{"c", prt_char},
+		{"i", prt_int},
+		{"f", prt_float},
+		{"s", prt_str},
+		{NULL, NULL}
+	};
 
-	va_start(list, format);
-	while (i < len)
+	va_start(elemtopr, format);
+	while (format != NULL && format[i])
 	{
-		if (format[i] == 's' && va_arg(list, char*))
+		j = 0;
+		while (varray[j].c)
 		{
-			printf("%s", va_arg(list, char*));
+			if (format[i] == *(varray[j].c))
+			{
+				varray[j].prf(elemtopr);
+				break;
+			}
+			j++;
 		}
-		else if (format[i] == 'c')
-		{
-			printf("%c", va_arg(list, int));
-		}
-		else if (format[i] == 'f')
-		{
-			printf("%f", va_arg(list, double));
-		}
-		else if (format[i] == 'i')
-		{
-		printf("%i", va_arg(list, int));
-		}
-		if (i != (len - 1))
-		{
-		printf(", ");
-		}
+		if ((format[i + 1]) != '\0' && varray[j].c != NULL)
+			printf(", ");
 		i++;
 	}
+	va_end(elemtopr);
 	printf("\n");
-	va_end(list);
-
 }
