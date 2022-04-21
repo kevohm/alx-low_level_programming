@@ -1,7 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 /**
- * struct link_s - linked list
+ * struct list_s - linked list
  * @str: string
  * @next: pointer to next node
  * @len: length of string
