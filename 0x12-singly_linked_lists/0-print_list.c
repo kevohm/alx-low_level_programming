@@ -3,7 +3,7 @@
 
 size_t print_list(const list_t *h)
 {
-	int i = 0;
+	size_t i = 0;
 
 	if (h == NULL)
 	{
@@ -19,12 +19,7 @@ size_t print_list(const list_t *h)
 			printf("[0] (nil)\n");
 		}else
 		{
-			printf("[%d]",size);
-			while (*p)
-			{
-				printf("%c", *p);
-				p++;
-			}
+			printf("[%d] %s",size, p);
 			printf("\n");
 		}
 		i++;
