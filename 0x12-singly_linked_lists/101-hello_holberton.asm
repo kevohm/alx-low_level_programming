@@ -1,18 +1,13 @@
-global _start
+	global    main
+	          extern    printf
 
-section .text
+	          section   .text
+main:	push      rbx	; Call stack must be aligned
+	          lea       rdi, [rel message] ; First argument is address of message
+		  call      printf	       ; (message)
+		  xor 	    eax,eax
+		  pop       rbx		       ; Fix up stack before returning
+	          ret
 
-_start:
- mov rax, 1 
- mov rdi, 1
- mov rsi, msg
- mov rdx, msglen
- syscall
-
- mov rax, 60
- mov rdi, 0
- syscall
-
- section .rodata
- msg: db "hello, world!", 10
- msqlen: eq $ - msg
+	          section   .data
+message:	  db        "Hello, Holberton", 10, 0
