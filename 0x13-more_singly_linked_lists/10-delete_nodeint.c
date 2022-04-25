@@ -9,32 +9,37 @@
  *
  * Description: returns 1 for success and -1 otherwise
  */
-int delete_nodeint_at_index(listint_t **head, unsigned int i)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *current = *head;
-	listint_t *prev = *head;
-	unsigned int counter = 0;
+	unsigned int i;
+	listint_t *temp, *temp2;
 
-	if (current == NULL)
-	{
+	if (head == NULL || *head == NULL)
 		return (-1);
-	}
-	while (current != NULL)
+	if (index == 0)
 	{
-		if (counter == i)
+		if (*head != NULL)
 		{
-			if(current->next == NULL)
-			{
-				prev->next = NULL;
-			}
-			else
-			{
-				prev->next = current->next;
-			}
+			temp = *head;
+			*head = (*head)->next;
+			free(temp);
+			return (1);
 		}
-		prev = current;
-		current=current->next;
-		counter++;
+	}
+	else
+	{
+		temp = *head;
+		for (i = 0; temp && (i < index - 1); i++, temp = temp->next)
+			;
+		if (temp != NULL)
+		{
+			temp2 = temp;
+			temp = temp->next;
+			temp2->next = temp->next;
+			free(temp);
+		}
+		else
+			return (-1);
 	}
 	return (1);
 }
