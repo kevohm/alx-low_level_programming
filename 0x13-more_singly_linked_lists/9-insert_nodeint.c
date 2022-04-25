@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
+/**
+ * insert_nodeint_at_index - inserts at given index
+ * @head: pointer to head
+ * @n: integer
+ * @idx: index
+ * Return: pointer to newNode
+ *
+ * Description: locates and inserts at index
+ */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *newNode = (listint_t *)malloc(sizeof(listint_t));
@@ -19,7 +28,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			*head = current->next;
 		return (NULL);
 	}
-	for(;current;current=current->next)
+	for (; current; current = current->next)
 	{
 		if (i == idx)
 		{
