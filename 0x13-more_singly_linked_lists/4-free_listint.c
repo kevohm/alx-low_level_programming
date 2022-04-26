@@ -1,20 +1,20 @@
-#include <stdio.h>
 #include "lists.h"
-#include <stdlib.h>
+
 /**
- * free_listint - free allocated memory to list
- * @head: pointer to struct
- * Return: nothing
- *
- * Description: free memory allocated
+ * free_listint - frees a listint_t list
+ * @head: pointer to head of list
  */
 void free_listint(listint_t *head)
 {
-	listint_t *temp;
+	listint_t *tmp;
 
-	if (head == NULL)
+	if (!head)
 		return;
-	temp = head;
-	for (; temp; temp = temp->next)
-		free(temp);
+	while (head)
+	{
+		tmp = head;
+		head = head->next;
+		free(tmp);
+	}
+	head = NULL;
 }
