@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
  * print_listint - prints values in singly linked node
  * @h: pointer to listint_t(struct listint_s)
@@ -14,7 +12,7 @@ size_t print_listint(const listint_t *h)
 
 	if (h == NULL)
 	{
-		return (0);
+		return (i0);
 	}
 	while (h !=  NULL)
 	{
