@@ -10,7 +10,7 @@ size_t print_listint_safe(const listint_t *head)
 	int pdiff, count, a;
 
 	if (head == NULL)
-		return (exit(98));
+		return (0);
 	for (count = 0; head; count++)
 	{
 		pdiff = head - head->next;
