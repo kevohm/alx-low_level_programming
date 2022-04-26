@@ -1,6 +1,6 @@
-#include "lists.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
 /**
  * print_listint - prints values in singly linked node
  * @h: pointer to listint_t(struct listint_s)
