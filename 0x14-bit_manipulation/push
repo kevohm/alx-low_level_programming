@@ -1,5 +1,0 @@
-#!/bin/bash
-echo "Enter message:"
-read name
-git add . && git commit -m "$name"
-git push
