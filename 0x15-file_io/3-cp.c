@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * close_check - checks if something can be closed and conducts correct actions
