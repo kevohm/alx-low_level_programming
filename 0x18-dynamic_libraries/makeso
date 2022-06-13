@@ -1,3 +1,5 @@
 #!/bin/bash
 gcc func.c func.h -c -fPIC
-gcc func.o -shared -o 100-operations.so 
+gcc func.o -shared -o lib100-operations.so 
+mv lib100-operations.so 100-operations.so
+chmod u+x 100-operations.so
