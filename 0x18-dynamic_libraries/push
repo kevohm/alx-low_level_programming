@@ -1,0 +1,14 @@
+#!/bin/bash
+printf "\n\n===== updating github =====\n\n"
+echo "Enter msg: "
+read msg
+if ["$msg" = ""];
+then
+	git add --all . && git commit -m "done"
+	git push
+else
+	git add --all . && git commit -m "$msg"
+	git push
+fi
+sleep 2
+clear
