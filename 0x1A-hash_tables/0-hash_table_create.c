@@ -10,10 +10,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (!size)
 		return (NULL);
-	newTable = malloc(sizeof(hash_node_t *));
+	newTable = malloc(sizeof(hash_table_t *));
 	newTable->array = malloc(sizeof(hash_node_t *) * size);
 	newTable->size = size;
-	if (!newTable)
+	if (newTable == NULL)
 	{
 		free(newTable->array);
 		free(newTable);
