@@ -5,3 +5,4 @@
 * What are explicit and implicit rules
 * What are the most common / useful rules
 * What are variables and how to set and use them
+image[https://ibb.co/gVKWK7y]
