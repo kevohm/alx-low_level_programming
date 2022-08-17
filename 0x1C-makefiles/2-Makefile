@@ -1,7 +1,10 @@
-CC = gcc
-SRC = main.c school.c
-OBJ = main.o school.o
-NAME = school
+CC=gcc
+SRC = main.c holberton.c
+OBJ = $(patsubst %.c, %.o, $(SRC))
+NAME=school
 
-all: main.c school.c
-	$(cc) $^ $^ -o $(NAME) 
+%.o: %.c
+	$(CC) -c -o $@ $^
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
