@@ -18,7 +18,7 @@ def island_perimeter(grid):
     c_s = False
 
     for row in range(0,height):
-        if type(grid[i]) is not list:
+        if type(grid[row]) is not list:
             return 0
         for col in range(0,width):
             if type(grid[row][col]) != int:
