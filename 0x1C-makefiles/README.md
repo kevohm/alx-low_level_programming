@@ -5,3 +5,4 @@
 * What are explicit and implicit rules
 * What are the most common / useful rules
 * What are variables and how to set and use them
+[![gcc.jpg](https://i.postimg.cc/FRkLPNhX/gcc.jpg)](https://postimg.cc/FdmzztfT)
