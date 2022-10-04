@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <math.h>
 /**
  * binary_search - searches for a value using the Binary search algorithm
  * @array: a pointer to the first element of the array to search in
@@ -13,7 +12,7 @@ int binary_search(int *array, size_t size, int value)
 
 	while (left <= right)
 	{
-		mid = floor((right + left) / 2);
+		mid = (right + left) / 2;
 		print_array(array, left, right);
 		if (array[mid] < value)
 		{
