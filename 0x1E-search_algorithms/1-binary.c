@@ -34,9 +34,9 @@ int binary_search(int *array, size_t size, int value)
 
 /**
  * print_array - prints section of array
- * @array - pointer to array
- * @left - point to starting point of array (index)
- * @right - points to ending point of array (index)
+ * @array: pointer to array
+ * @left: point to starting point of array (index)
+ * @right: points to ending point of array (index)
  * Return: Nothing
  */
 void print_array(int *array, int left, int right)
